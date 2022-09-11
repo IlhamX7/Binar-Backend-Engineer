@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "49e16a52-59ce-4c94-85d1-860723436caa",
+		"name": "Postman Binar Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"bot\",\n  \"email\": \"bot@example.com\",\n  \"password\": \"bot123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"bot\",\n\t\"password\" : \"bot123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD V1",
+			"item": [
+				{
+					"name": "Create Data",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib3QiLCJpYXQiOjE2NjI4NzE0MDQsImV4cCI6MTY2Mjk1NzgwNH0.9-iYXMkhuvr6fVXK_B6wF_fH4NGaQpv9ljS2RKmfEeKLNvYz64kMa9GMbwdVF_6BSIHXUqNJaBqZgEBefNGW4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"polygon xtrada x4\",\n  \"price\": \"2180\",\n  \"imageurl\": \"https://polygoneeimages.s3.amazonaws.com/images/19342/xtrada_5_p.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/v1/products/",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib3QiLCJpYXQiOjE2NjI4NzA1MzgsImV4cCI6MTY2Mjk1NjkzOH0.JHfGDk4fkahgsMMIgfYNax0K1TLYjmKE8Uy9kk-O5aS56y5prJPKrIkHeOFcXoG5wPLBX3andMrLuxW3mrQnuA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8090/v1/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Data By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib3QiLCJpYXQiOjE2NjI4NzA1MzgsImV4cCI6MTY2Mjk1NjkzOH0.JHfGDk4fkahgsMMIgfYNax0K1TLYjmKE8Uy9kk-O5aS56y5prJPKrIkHeOFcXoG5wPLBX3andMrLuxW3mrQnuA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8090/v1/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib3QiLCJpYXQiOjE2NjI4NzE0MDQsImV4cCI6MTY2Mjk1NzgwNH0.9-iYXMkhuvr6fVXK_B6wF_fH4NGaQpv9ljS2RKmfEeKLNvYz64kMa9GMbwdVF_6BSIHXUqNJaBqZgEBefNGW4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"polygon xtrada Z6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8090/v1/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib3QiLCJpYXQiOjE2NjI4NzE0MDQsImV4cCI6MTY2Mjk1NzgwNH0.9-iYXMkhuvr6fVXK_B6wF_fH4NGaQpv9ljS2RKmfEeKLNvYz64kMa9GMbwdVF_6BSIHXUqNJaBqZgEBefNGW4A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8090/v1/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v1",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testing API V2",
+			"item": [
+				{
+					"name": "Show Data",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJib3QiLCJpYXQiOjE2NjI4NzE0MDQsImV4cCI6MTY2Mjk1NzgwNH0.9-iYXMkhuvr6fVXK_B6wF_fH4NGaQpv9ljS2RKmfEeKLNvYz64kMa9GMbwdVF_6BSIHXUqNJaBqZgEBefNGW4A",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8090/v2/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"v2",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
